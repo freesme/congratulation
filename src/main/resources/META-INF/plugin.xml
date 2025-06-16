@@ -1,0 +1,24 @@
+<idea-plugin>
+    <id>moon1it.com.confetti</id>
+    <name>confetti</name>
+    <vendor>moon1it.com</vendor>
+    <description>在代码编译成功时显示五彩纸屑庆祝效果</description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- 注册配置服务 -->
+        <applicationService serviceImplementation="moon1it.com.confetti.ConfettiSettings"/>
+        
+        <!-- 启动活动 -->
+        <postStartupActivity implementation="moon1it.com.confetti.ConfettiPlugin"/>
+        
+        <!-- 配置面板 -->
+        <applicationConfigurable
+                parentId="appearance"
+                provider="moon1it.com.confetti.ConfettiConfigurableProvider"
+                id="moon1it.com.confetti.settings"
+                displayName="Confetti"/>
+    </extensions>
+</idea-plugin>
