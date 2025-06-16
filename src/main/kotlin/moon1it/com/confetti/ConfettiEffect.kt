@@ -26,7 +26,7 @@ class ConfettiEffect {
                 val frame = JFrame()
                 frame.isUndecorated = true
                 frame.background = Color(0, 0, 0, 0)
-                frame.size = Dimension(800, 600)
+                frame.size = Dimension(1800, 800)
                 
                 // 根据设置的位置计算窗口位置
                 val screenSize = frame.toolkit.screenSize
